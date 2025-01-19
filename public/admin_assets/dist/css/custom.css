@@ -1,0 +1,389 @@
+/* Add a custom XXL breakpoint */
+@media (min-width: 1600px) {
+    .col-xxl-1 {
+        flex: 0 0 8.333333%;
+        max-width: 8.333333%;
+    }
+
+    .col-xxl-2 {
+        flex: 0 0 16.666667%;
+        max-width: 16.666667%;
+    }
+
+    .col-xxl-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+
+    .col-xxl-4 {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+
+    .col-xxl-5 {
+        flex: 0 0 41.666667%;
+        max-width: 41.666667%;
+    }
+
+    .col-xxl-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .col-xxl-7 {
+        flex: 0 0 58.333333%;
+        max-width: 58.333333%;
+    }
+
+    .col-xxl-8 {
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
+    }
+
+    .col-xxl-9 {
+        flex: 0 0 75%;
+        max-width: 75%;
+    }
+
+    .col-xxl-10 {
+        flex: 0 0 83.333333%;
+        max-width: 83.333333%;
+    }
+
+    .col-xxl-11 {
+        flex: 0 0 91.666667%;
+        max-width: 91.666667%;
+    }
+
+    .col-xxl-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+p {
+    margin: 0;
+}
+
+.table td,
+.table th {
+    vertical-align: middle;
+}
+
+thead {
+    background: #cbe4ff;
+}
+
+.h-unset {
+    height: unset;
+}
+
+.dummy-blog-img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+
+.preloader {
+    transition: height 50ms linear;
+}
+
+.blog-desc-wrapper {
+    max-width: 100%;
+    overflow: auto;
+}
+
+.curr-img {
+    width: 150px;
+    height: 150px;
+    padding: 5px;
+    border: 1px solid #ced4da;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.25rem;
+}
+
+.curr-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+.brand-link {
+
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+
+.brand-link .brand-image,
+.user-panel .image img {
+    max-width: unset;
+    width: 33px;
+    height: 33px;
+    object-fit: cover;
+}
+
+.user-panel .image i {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.pagination-wrapper svg {
+    width: 20px;
+}
+
+.pagination-wrapper [aria-label='Pagination Navigation'] div:first-child {
+    display: none;
+}
+
+.pagination-wrapper>nav {
+    height: max-content;
+    border-top: 1px solid #dee2e6;
+    padding: 20px;
+}
+
+.pagination-wrapper [aria-current="page"] span {
+    background: #cce4ff !important;
+}
+
+.pagination-wrapper span a {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+.table thead th {
+    vertical-align: middle;
+}
+
+
+.select2-container--default .select2-selection--single {
+    height: calc(2.25rem + 2px) !important;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+    padding-left: 2px !important;
+}
+
+.alert {
+    /* box-shadow: -9px 9px 20px 0px #00000066; */
+}
+
+.alert .close {
+    opacity: .5;
+}
+
+.alert-content-header {
+    animation: dissolvealert 4s both ease;
+    position: fixed;
+    top: 60px;
+    right: 0px;
+    width: 50%;
+    min-width: max-content;
+    z-index: 99;
+}
+
+@media(max-width:767px) {
+    .alert-content-header {
+        width: 90%;
+    }
+}
+
+@keyframes dissolvealert {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+
+.alert-dark .close {
+    color: #ffffff;
+    opacity: 1;
+}
+
+.card-footer .btn {
+    margin-right: 12px;
+}
+
+
+
+
+/* custom modal start */
+
+.qs-modal-content {
+    position: fixed;
+    z-index: 9999;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 80%;
+    max-width: 1300px;
+    height: max-content;
+    max-height: 80%;
+    background: #ffffff;
+    box-shadow: -20px 1px 20px 20px #00000047;
+    overflow-y: auto;
+}
+
+.qs-modal {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0000007c;
+    overflow: hidden;
+}
+
+@media(max-width:767px) {
+    .qs-modal-content {
+        width: 100%;
+    }
+}
+
+/* custom modal end */
+
+
+.tooltip {
+    top: 0;
+}
+
+.direct-chat-messages {
+    height: auto !important;
+}
+
+.direct-chat-text {
+    background-color: #f1f6ff;
+    border: 1px solid #d6e4ff;
+}
+
+.direct-chat-img {
+    object-fit: cover;
+    border: 1px solid #98caff;
+}
+
+.dashboard-counter-icon i {
+    display: inline-block;
+
+    font-size: 50px;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    transition: -webkit-transform .3s linear;
+    transition: transform .3s linear;
+    transition: transform .3s linear, -webkit-transform .3s linear;
+    color: rgba(0, 0, 0, .15);
+}
+
+@media (max-width:767px) {
+    .dashboard-counter-icon i {
+        display: none;
+    }
+}
+
+.small-box:hover .dashboard-counter-icon>i {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    transform-origin: bottom right;
+}
+
+
+.dashboard-gym-routine table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+.dashboard-gym-routine table th,
+.dashboard-gym-routine table td {
+    border: 1px solid #d7d7d7;
+    padding: 10px;
+    text-align: left;
+}
+
+@media (max-width:767px) {
+    .dashboard-gym-routine table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .dashboard-gym-routine table th,
+    .dashboard-gym-routine table td {
+        width: 100%;
+        min-width: 150px;
+    }
+}
+
+
+.table-round-image {
+    width: 40px;
+    height: 40px;
+    background-size: cover !important;
+    object-fit: cover;
+    background-position: center !important;
+    border-radius: 80px;
+    border: 1px solid #98caff;
+    max-width: 40px;
+    max-height: 40px;
+}
+
+.content-wrapper>.content {
+    padding-bottom: 300px !important;
+}
+
+.double-click-link {
+    cursor: default !important;
+}
+
+.nav-sidebar>.nav-item.menu-open {
+    margin-bottom: 10px;
+}
+
+/* table-user-row-info stat  */
+.table-user-row-info {
+    display: flex;
+    align-items: center;
+}
+
+.table-user-row-info .img-wrapper {
+    height: max-content;
+    width: max-content;
+    margin-right: 7px;
+}
+
+.table-user-row-info .right-part {
+    display: flex;
+    flex-direction: column;
+}
+
+.table-user-row-info .right-part .name,
+.table-user-row-info .right-part .id
+{
+    font-weight: bold;
+    white-space: normal;
+    line-height: 18px;
+    color: #094c93;
+}
+
+/* table-user-row-info end  */

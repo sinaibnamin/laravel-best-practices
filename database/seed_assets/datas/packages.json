@@ -1,0 +1,205 @@
+[
+    {
+        "status": "Active",
+        "name": "1 Month Non Treadmill ",
+        "price": 4000,
+        "duration": "30",
+        "discount": 0
+    },
+    {
+        "status": "Active",
+        "name": "2 Months Non Treadmill",
+        "price": 4500,
+        "duration": "60",
+        "discount": 0
+    },
+    {
+        "status": "Active",
+        "name": "3 Months Non Treadmill",
+        "price": 5500,
+        "duration": "90",
+        "discount": 0
+    },
+    {
+        "status": "Active",
+        "name": "6 Months Non Treadmill",
+        "price": 7500,
+        "duration": "180",
+        "discount": 0
+    },
+    {
+        "status": "Active",
+        "name": "12 Months Non Treadmill",
+        "price": 11000,
+        "duration": "360",
+        "discount": 0
+    },
+    {
+        "status": "Active",
+        "name": "24 Months Non Treadmill",
+        "price": 18000,
+        "duration": "720",
+        "discount": 0
+    },
+    {
+        "status": "Active",
+        "name": "1 Month With Treadmill",
+        "price": 4500,
+        "duration": "30",
+        "discount": 0
+    },
+    {
+        "status": "Active",
+        "name": "3 Months With Treadmill",
+        "price": 7000,
+        "duration": "90",
+        "discount": 0
+    },
+    {
+        "status": "Active",
+        "name": "6 Months With Treadmill",
+        "price": 10000,
+        "duration": "180",
+        "discount": 0
+    },
+    {
+        "status": "Active",
+        "name": "12 Months With Treadmill",
+        "price": 16000,
+        "duration": "360",
+        "discount": 0
+    },
+    {
+        "status": "Active",
+        "name": "24 Months With Treadmill",
+        "price": 25000,
+        "duration": "720",
+        "discount": 0
+    },
+    {
+        "status": "Active",
+        "name": "Couple Package 3 Months",
+        "price": 10000,
+        "duration": "90",
+        "discount": 0
+    },
+    {
+        "status": "Active",
+        "name": "Couple Package 6 Months ",
+        "price": 16000,
+        "duration": "180",
+        "discount": 0
+    },
+    {
+        "status": "Active",
+        "name": "Couple Package 12 Months ",
+        "price": 21000,
+        "duration": "360",
+        "discount": 0
+    },
+    {
+        "status": "Active",
+        "name": "FEMALE 1 MONTH ",
+        "price": 4500,
+        "duration": "30",
+        "discount": 0
+    },
+    {
+        "status": "Active",
+        "name": "FEMALE 3 MONTHS",
+        "price": 6000,
+        "duration": "90",
+        "discount": 0
+    },
+    {
+        "status": "Active",
+        "name": "FEMALE 6 MONTHS",
+        "price": 10000,
+        "duration": "180",
+        "discount": 0
+    },
+    {
+        "status": "Active",
+        "name": "FEMALE 12 MONTHS",
+        "price": 16000,
+        "duration": "360",
+        "discount": 0
+    },
+    {
+        "status": "Active",
+        "name": "Monthly Fee Non Treadmill ",
+        "price": 1200,
+        "duration": "30",
+        "discount": 0
+    },
+    {
+        "status": "Active",
+        "name": "Monthly Fee With Treadmill ",
+        "price": 1800,
+        "duration": "30",
+        "discount": 0
+    },
+    {
+        "status": "Active",
+        "name": "FEMALE MONTHLY FEE",
+        "price": 1800,
+        "duration": "30",
+        "discount": 0
+    },
+    {
+        "status": "Active",
+        "name": "2 Months With Treadmill",
+        "price": 5500,
+        "duration": "60",
+        "discount": 0
+    },
+    {
+        "status": "Active",
+        "name": "3M Fee ",
+        "price": 3200,
+        "duration": "90",
+        "discount": 0
+    },
+    {
+        "status": "Active",
+        "name": "6M Fee",
+        "price": 5500,
+        "duration": "180",
+        "discount": 0
+    },
+    {
+        "status": "Active",
+        "name": "12M Fee",
+        "price": 9000,
+        "duration": "360",
+        "discount": 0
+    },
+    {
+        "status": "Active",
+        "name": "3M with Treadmill ",
+        "price": 4000,
+        "duration": "90",
+        "discount": 0
+    },
+    {
+        "status": "Active",
+        "name": "6M Fee with Treadmill  ",
+        "price": 8000,
+        "duration": "180",
+        "discount": 0
+    },
+    {
+        "status": "Active",
+        "name": "12M Fee with Treadmill ",
+        "price": 14000,
+        "duration": "360",
+        "discount": 0
+    },
+    {
+        "status": "Active",
+        "name": "2M FEE ",
+        "price": 2400,
+        "duration": "60",
+        "discount": 0
+    }
+]

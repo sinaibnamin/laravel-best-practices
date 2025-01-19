@@ -1,0 +1,151 @@
+.members-daily-track-wrapper {
+    padding: 15px
+}
+
+.members-daily-track-wrapper .members-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.members-daily-track-wrapper .members-wrapper .member {
+    width: max-content;
+    max-width: 200px;
+    height: max-content;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    background: #f2f2f287;
+    border-radius: 10px;
+    min-width: 160px;
+    position: relative;
+    box-sizing: border-box;
+    border: 2px solid rgb(0 0 0 / 3%);
+}
+
+.members-daily-track-wrapper .members-wrapper .member.loading {
+    pointer-events: none;
+    cursor: wait;
+    opacity: .5;
+}
+
+.members-daily-track-wrapper .members-wrapper img {
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+.members-daily-track-wrapper .members-wrapper .member.expire {
+    border: 2px solid #dc35454a;
+}
+
+.members-daily-track-wrapper .members-wrapper .name {
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 10px;
+  line-height: 16px;
+    color: inherit;
+}
+.members-daily-track-wrapper .members-wrapper .uniq_id {
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    color: var(--dark);
+}
+
+.members-daily-track-wrapper .members-wrapper .phone {
+    text-align: center;
+    font-weight: normal;
+    font-size: 14px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    color: inherit;
+}
+.members-daily-track-wrapper .members-wrapper .status {
+    text-align: center;
+    font-weight: normal;
+    font-size: 13px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    color: inherit;
+}
+.members-daily-track-wrapper .members-wrapper .present .status {
+    font-weight: bold;
+    
+}
+
+.members-daily-track-wrapper .members-wrapper .member.present {
+    background: #e7f5e9;
+}
+
+.members-daily-track-wrapper .members-wrapper .member.present::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 10px;
+    right: 10px;
+    background: url('/site_images/statics/green_tick.png') no-repeat center center;
+    background-size: cover; /* Ensures the image covers the area */
+}
+
+.members-daily-track-wrapper .member .validity{
+    font-weight: bold;
+    color: var(--success);
+    font-size: 13px;
+}
+
+.members-daily-track-wrapper .member.expire .validity{
+    font-weight: bold;
+    color: var(--danger);
+}
+
+.members-daily-track-wrapper .members-wrapper .member:hover {
+    border: 2px solid var(--blue);
+}
+.members-daily-track-wrapper .members-wrapper .member.expire:hover {
+    border: 2px solid var(--danger);
+}
+
+.search-container {
+    position: relative;
+    color: red;
+    overflow: hidden;
+   
+}
+
+#searchBox {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.clear-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+   
+    background: #e7e7e7;
+    width: 50px;
+    height: calc(100% - 3px);
+    right: 1px;
+    font-size: 30px;
+    text-align: center;
+    color: #474747 !important;
+    border-radius: 0 4px 4px 0;
+}
+
+#searchBox:focus + .clear-icon,
+#searchBox:not(:placeholder-shown) + .clear-icon {
+    display: block; 
+}
+

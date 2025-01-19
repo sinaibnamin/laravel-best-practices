@@ -1,0 +1,10 @@
+// expense routes     
+    Route::get('/expense/list', [ExpenseController::class, 'index'])->name('expense.index');
+    Route::get('/expense/print', [ExpenseController::class, 'index'])->name('expense.print');
+    Route::get('/expense/create', [ExpenseController::class, 'create'])->name('expense.create');
+    Route::post('/expense/store', [ExpenseController::class, 'store'])->name('expense.store');
+    Route::get('/expense/show/{id}', [ExpenseController::class, 'show'])->name('expense.show');
+    Route::get('/expense/ajax_member_history/{id}', [ExpenseController::class, 'ajax_member_history'])->name('expense.ajax_member_history');
+    Route::get('/expense/edit/{id}', [ExpenseController::class, 'edit'])->name('expense.edit');
+    Route::post('/expense/update/{id}', [ExpenseController::class, 'update'])->name('expense.update');
+    Route::get('/expense/delete/{id}', [ExpenseController::class, 'delete'])->name('expense.delete');

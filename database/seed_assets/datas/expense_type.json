@@ -1,0 +1,28 @@
+[
+    {
+        "title": "Equipment buy",
+        "description": "equipment buying cost",
+        "status": "Active"
+    },
+    {
+        "title": "Utility cost",
+        "description": "gas bill, electricity bill, water bill etc.",
+        "status": "Active"
+    },
+    {
+        "title": "Staff salary",
+        "description": "salary of staffs",
+        "status": "Active"
+    },
+    {
+        "title": "Trainer salary",
+        "description": "salary of trainers",
+        "status": "Active"
+    },
+    {
+        "title": "Maintainance cost",
+        "description": "costs for repair or maintainance something",
+        "status": "Active"
+    }
+   
+]
