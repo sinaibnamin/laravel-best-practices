@@ -98,46 +98,72 @@ class MemberController extends Controller {
     //     'email': 'janedoe@example.com'
     // }
 
-    public function store( Request $request ) {
+    public function store(Request $request)
+    {
         try {
+            // Get the allowed fields
+            $allowedFields = ['full_name', 'nid', 'address', 'email'];
+
+            // Get the request data
+            $requestData = $request->all();
+
+            // Find extra fields (those not in allowedFields)
+            $extraFields = array_diff_key($requestData, array_flip($allowedFields));
+
+            // If there are extra fields, return an error response
+            if (!empty($extraFields)) {
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Invalid fields provided.',
+                    'extra_fields' => $extraFields,
+                ], 400);
+            }
+
             // Define validation rules
-            $validator = Validator::make( $request->only( [ 'full_name', 'nid', 'address', 'email' ] ), [
+            $validator = Validator::make($request->only($allowedFields), [
                 'full_name' => 'nullable|string|max:255',
                 'nid' => 'nullable|string|max:255',
                 'address' => 'nullable|string|max:255',
                 'email' => 'required|email|max:255|unique:members,email',
-            ] );
+            ]);
 
             // Check if validation fails
-            if ( $validator->fails() ) {
-                return response()->json( [
+            if ($validator->fails()) {
+                return response()->json([
                     'success' => false,
                     'errors' => $validator->errors(),
                     'message' => 'Validation failed.',
-                ], 422 );
+                ], 422);
             }
 
             // Retrieve only validated data
-            $validatedData = $validator->validated();
+            $validatedData = $request->only($allowedFields);
 
-            // Create a new member using mass assignment
-            $member = Member::create( $validatedData );
+            // Create a new member and assign data manually
+            $member = new Member();
+            $member->full_name = $validatedData['full_name'] ?? null;
+            $member->nid = $validatedData['nid'] ?? null;
+            $member->address = $validatedData['address'] ?? null;
+            $member->email = $validatedData['email'];
+            $member->save();
 
             // Return success response
-            return response()->json( [
+            return response()->json([
                 'success' => true,
                 'data' => $member,
                 'message' => 'Member created successfully.',
-            ], 201 );
-        } catch ( \Exception $e ) {
+            ], 201);
+        } catch (\Exception $e) {
             // Return general error response
-            return response()->json( [
+            return response()->json([
                 'success' => false,
                 'error' => 'An error occurred while creating the member.',
-                'details' => config( 'app.debug' ) ? $e->getMessage() : null, // Detailed error in debug mode
-            ], 500 );
+                'details' => config('app.debug') ? $e->getMessage() : null, // Detailed error in debug mode
+            ], 500);
         }
     }
+
+    
 
     // HTTP Method: GET
     // URL: /api/members/ {id}
@@ -188,57 +214,81 @@ class MemberController extends Controller {
     //     'email': 'updatedemail@example.com'
     // }
 
-    public function update( Request $request, $id ) {
+    public function update(Request $request, $id)
+    {
         try {
-            // Find the member by ID
-            $member = Member::find( $id );
+            // Get the allowed fields
+            $allowedFields = ['full_name', 'nid', 'address', 'email'];
+            
+            // Get the request data
+            $requestData = $request->all();
 
-            // Check if member exists
-            if ( !$member ) {
-                return response()->json( [
+            // Find extra fields (those not in allowedFields)
+            $extraFields = array_diff_key($requestData, array_flip($allowedFields));
+
+            // If there are extra fields, return an error response
+            if (!empty($extraFields)) {
+                return response()->json([
                     'success' => false,
-                    'message' => 'Member not found.',
-                ], 404 );
+                    'message' => 'Invalid fields provided.',
+                    'extra_fields' => $extraFields,
+                ], 400);
             }
 
             // Define validation rules
-            $validator = Validator::make( $request->only( [ 'full_name', 'nid', 'address', 'email' ] ), [
+            $validator = Validator::make($request->only($allowedFields), [
                 'full_name' => 'nullable|string|max:255',
                 'nid' => 'nullable|string|max:255',
                 'address' => 'nullable|string|max:255',
-                'email' => 'required|email|max:255|unique:members,email,' . $member->id,
-            ] );
+                'email' => 'required|email|max:255|unique:members,email,' . $id,
+            ]);
 
             // Check if validation fails
-            if ( $validator->fails() ) {
-                return response()->json( [
+            if ($validator->fails()) {
+                return response()->json([
                     'success' => false,
                     'errors' => $validator->errors(),
                     'message' => 'Validation failed.',
-                ], 422 );
+                ], 422);
             }
 
             // Retrieve only validated data
-            $validatedData = $validator->validated();
+            $validatedData = $request->only($allowedFields);
 
-            // Update the member with validated data
-            $member->update( $validatedData );
+            // Find the member by ID
+            $member = Member::find($id);
+
+            if (!$member) {
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Member not found.',
+                ], 404);
+            }
+
+            // Update the member with new data
+            $member->full_name = $validatedData['full_name'] ?? $member->full_name;
+            $member->nid = $validatedData['nid'] ?? $member->nid;
+            $member->address = $validatedData['address'] ?? $member->address;
+            $member->email = $validatedData['email'] ?? $member->email;
+            $member->save();
 
             // Return success response
-            return response()->json( [
+            return response()->json([
                 'success' => true,
                 'data' => $member,
                 'message' => 'Member updated successfully.',
-            ], 200 );
-        } catch ( \Exception $e ) {
+            ], 200);
+        } catch (\Exception $e) {
             // Return general error response
-            return response()->json( [
+            return response()->json([
                 'success' => false,
                 'error' => 'An error occurred while updating the member.',
-                'details' => config( 'app.debug' ) ? $e->getMessage() : null, // Detailed error in debug mode
-            ], 500 );
+                'details' => config('app.debug') ? $e->getMessage() : null,
+            ], 500);
         }
     }
+
+
 
     // Example Request:
     // HTTP Method: DELETE
