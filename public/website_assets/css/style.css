@@ -1,0 +1,76 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+    max-width: 90%;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.buttons a {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.admin-login {
+    background-color: #3498db;
+}
+
+.admin-login:hover {
+    background-color: #2980b9;
+}
+
+.member-login {
+    background-color: #e74c3c;
+}
+
+.member-login:hover {
+    background-color: #c0392b;
+}
+
+.trainer-login {
+    background-color: #2ecc71;
+}
+
+.trainer-login:hover {
+    background-color: #27ae60;
+}
+
+@media (min-width: 600px) {
+    .buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+}

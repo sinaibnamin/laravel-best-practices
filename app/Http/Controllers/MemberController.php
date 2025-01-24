@@ -43,21 +43,8 @@ class MemberController extends Controller {
             if ( !empty( $request->full_name ) ) {
                 $query->where( 'full_name', 'LIKE', "%{$request->full_name}%" );
             }
-            if ( !empty( $request->uniq_id ) ) {
-                $query->where( 'uniq_id', 'LIKE', "%{$request->uniq_id}%" );
-            }
-            if ( !empty( $request->phone_number ) ) {
-                $query->where( 'phone_number', 'LIKE', "%{$request->phone_number}%" );
-            }
-            if ( $request->status !== 'all' && !empty( $request->status ) ) {
-                $query->where( 'status', $request->status );
-            }
-            if ( !empty( $request->validity_from ) ) {
-                $query->where( 'validity', '>=', $request->validity_from );
-            }
-            if ( !empty( $request->validity_to ) ) {
-                $query->where( 'validity', '<=', $request->validity_to );
-            }
+          
+          
 
             // Retrieve data
             $members = $query->get();
@@ -78,10 +65,6 @@ class MemberController extends Controller {
         }
     }
 
-    public function archivelist( Request $request ) {
-        $members = Member::where( 'status', '=', 'Archive' )->orderBy( 'updated_at', 'desc' )->paginate( 30 );
-        return view( 'admin.pages.member.list' )->with( 'members', $members );
-    }
 
     // HTTP Method: POST
     // URL: /api/members

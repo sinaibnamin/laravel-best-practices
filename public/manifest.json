@@ -1,0 +1,23 @@
+{
+    "name": "GymForest",
+    "short_name": "GymForest",
+    "start_url": "/admin_panel",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "icons": [
+      {
+        "src": "seo_images/gymforest_192.jpg",
+        "type": "image/png",
+        "sizes": "192x192",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "seo_images/gymforest_512.jpg",
+        "type": "image/png",
+        "sizes": "512x512",
+        "purpose": "any maskable"
+      }
+    ],
+    "theme_color": "#007bff",
+    "description": "GymForest - Gym management App"
+  }
